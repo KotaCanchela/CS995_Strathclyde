@@ -55,4 +55,4 @@ if __name__ == "__main__":
         numberOfRolls = playSnakesAndLadders(actions)
         averageRolls += float(numberOfRolls) / numberOfGames
 
-    print(f"Average number of rolls {str(averageRolls)}")
+    print(f"Average number of rolls in {numberOfGames} games: {str(averageRolls)}")

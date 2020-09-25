@@ -10,8 +10,6 @@ import math
 # deviation
 
 
-
-
 def standard_deviation(listNums):
     if len(listNums) <= 1:
         return None
@@ -19,16 +17,19 @@ def standard_deviation(listNums):
 
 
 def variance(data, ddof=0):
-     n = len(data)
-     mean = sum(data) / n
-     return sum((x - mean) ** 2 for x in data) / (n - ddof)
+    n = len(data)
+    mean = sum(data) / n
+    return sum((x - mean) ** 2 for x in data) / (n - ddof)
 
 
 def stdev(data):
+    if len(data) <= 1:
+        return None
     var = variance(data)
     std_dev = math.sqrt(var)
     return std_dev
 
+
 listIntegers = [2, 2.53, 6, 7.36]
 
-print(standard_deviation(listIntegers))
+print(stdev(listIntegers))
