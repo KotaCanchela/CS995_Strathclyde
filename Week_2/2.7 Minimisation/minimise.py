@@ -35,5 +35,15 @@ for i in range(3):
 # Select the two lowest values of the three
 threeRandVal.sort()
 del threeRandVal[2]
-
 # Select a new third value at random between the two remaining values
+# and loop until the difference between the lower two minima is less than 0.001
+while threeRandVal[1] - threeRandVal[0] > 0.001:
+    x = random.uniform(threeRandVal[0], threeRandVal[1])
+
+    threeRandVal.append(x)
+
+    threeRandVal.sort()
+    del threeRandVal[2]
+
+# Returns the value of x for the resulting minima
+print(threeRandVal)
