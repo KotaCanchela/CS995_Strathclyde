@@ -6,12 +6,11 @@ def SmoothCurve(windowSize, inputData, smoothedData):
 
     smoothedData += inputData.copy()
 
-    smoothedValue = 0
-    nPointsInWindow = 0
     nPoints = len(inputData)
 
     for point in range(nPoints):
-
+        smoothedValue = 0
+        nPointsInWindow = 0
         # Avoid smoothing if there are not enough points
         if point - windowSize < 0:
             continue
