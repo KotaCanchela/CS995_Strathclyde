@@ -1,7 +1,6 @@
 from testFunction import testFunction
 import random
-import operator
-import collections
+
 
 
 x = 1.5
