@@ -57,6 +57,8 @@ class ClassMark:
         self.marksGiven = marksGiven
 
 studentList = []
+studentNames = []
+objName = {}
 if __name__ == "__main__":
 
     getSurname = 0
@@ -64,15 +66,19 @@ if __name__ == "__main__":
     getClassMark = 0
 
     for name in first_name:
-        if name in studentList:
-            name.classMarks += [ClassMark(class_name[getClass], marks[getClassMark])]
+
+        if name in studentNames:
+            objName[name].classMarks.append(ClassMark(class_name[getClass], marks[getClassMark]))
             getSurname += 1
             getClass += 1
             getClassMark += 1
-            continue
+            break
 
         name = Student(name, surname[getSurname])
+
         studentList.append(name)
+        studentNames.append(name.firstName)
+        objName[name.firstName] = name
 
         getSurname += 1
 
