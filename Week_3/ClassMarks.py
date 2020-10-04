@@ -64,7 +64,13 @@ if __name__ == "__main__":
     getClassMark = 0
 
     for name in first_name:
-
+        if name in studentList:
+            name.classMarks.append(ClassMark(class_name[getClass], marks[getClassMark]))
+            getSurname += 1
+            getClass += 1
+            getClassMark += 1
+            continue
+    
         name = Student(name, surname[getSurname])
         studentList.append(name)
 
