@@ -36,4 +36,4 @@ if __name__ == "__main__":
 
     solarPanels = SolarPanelList(solarList, 180, 90)
 
-    print(f"The total power returned from the solar panels is{solarPanels.returnPow()} kWh")
+    print(f"The total power returned from the solar panels is {solarPanels.returnPow()}kWh")
