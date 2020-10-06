@@ -27,10 +27,10 @@ class SolarPanelList:
 
 
 if __name__ == "__main__":
-    firstSol = SolarPanel(5382, 150)
-    secondSol = SolarPanel(5383, 180)
-    thirdSol = SolarPanel(6926, 220)
-    fourthSol = SolarPanel(8632, 310)
+    firstSol = SolarPanel(5382, 150.)
+    secondSol = SolarPanel(5383, 180.)
+    thirdSol = SolarPanel(6926, 220.)
+    fourthSol = SolarPanel(8632, 310.)
 
     solarList = [firstSol, secondSol, thirdSol, fourthSol]
 
