@@ -15,7 +15,7 @@ class ThreeVector:
 
     def azimuthal(self):
         """
-        Function that returns the aximuthal angle between the x and y components
+        Function that returns the azimuthal angle between the x and y components
         """
         if self.x == 0 and self.y == 0:
             return 0

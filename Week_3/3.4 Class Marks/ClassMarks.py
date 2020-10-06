@@ -1,4 +1,5 @@
 import csv
+
 with open("ClassMarks.csv") as f:
     reader = csv.reader(f)
     header_row = next(reader)
@@ -20,7 +21,6 @@ with open("ClassMarks.csv") as f:
             surname.append(new_surname)
             class_name.append(new_class_name)
             marks.append(new_marks)
-
 
 class Student:
     """
