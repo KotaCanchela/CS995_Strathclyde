@@ -1,6 +1,7 @@
 import csv
 import json
 
+
 def loadData(filename, newData):
     """
     Load json into memory
@@ -50,13 +51,16 @@ def findMinandMax(newData, dataPoints):
         prev_last = last_pos
         last_pos = current_pos
 
+
 def exportData(filename, data_points):
     """
     Function to export data to CS
     """
 
     with open(filename, "w") as f:
-        csvWriter = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
+        csvWriter = csv.writer(
+            f, delimiter=",", quotechar='"', quoting=csv.QUOTE_NONNUMERIC
+        )
 
         # Write the column headings
         column_names = list(data_points.keys())
@@ -74,6 +78,7 @@ def exportData(filename, data_points):
 
 if __name__ == "__main__":
     newData = []
+
     loadData("mooninfo_2020.json", newData)
 
     dataPoints = {}
