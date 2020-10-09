@@ -22,6 +22,7 @@ def variance(data, ddof=0):
     return sum((x - mean) ** 2 for x in data) / (n - ddof)
 
 
+
 def stdev(data):
     if len(data) <= 1:
         return None
