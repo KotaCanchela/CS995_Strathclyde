@@ -1,0 +1,4 @@
+* Read the Gaelic language data for all electoral wards.
+* Find top three Gaelic speaking areas:
+  - In terms of total population.
+  - In terms of the relative number of speakers.

@@ -1,0 +1,42 @@
+Relative speakers => read total number of people.
+We need to read "All people" data.
+
+Data contain areas:
+  - Wards
+  - Scotland
+
+We have total number of people for all age groups.
+  - We need to use the "Total", rather than the age dependant data.
+
+The categories in the file are:
+  x "Understands but does not speak, read or write Gaelic"
+  o "Speaks, reads and writes Gaelic"
+  o Speaks but does not read or write Gaelic
+  o Speaks and reads but does not write Gaelic
+  x Reads but does not speak or write Gaelic
+  x Other combination of skills in Gaelic
+  x No skills in Gaelic
+
+Areas = {}
+Areas["area"] = PopulationByAge
+PopulationByAge = {}
+PopulationByAge["age"] = SkillCategory
+SkillCategory = {}
+SkillCategory["skill"] = int # Number of people.
+
+LOOP over areas:
+  IF area == "Scotland":
+    continue
+
+  IF age != Total:
+    continue
+
+  sum = 0
+  FOR category in speakingCatogries:
+    sum += numberOfPeople
+
+  absoluteSpeakers[area] = sum
+  relativeSpeakers[area] = sum / totalPeople
+
+
+
